@@ -6,7 +6,7 @@ import "./styles.css";
 export default function App() {
   return (
     <div className="App">
-      <h4>All Pages</h4>
+      {/* <h4></h4> */}
       <div className="all-page-container">
         <AllPages /> {/* Render the AllPages component here */}
       </div>
