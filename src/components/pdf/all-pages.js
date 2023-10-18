@@ -15,8 +15,37 @@ export default function AllPages() {
   const pageWidth = 800;
   const pageHeight = 1000;
 
+  // Your department data here
   const departments = [
-    // Your department data here
+    {
+      name: "Computer Science",
+      semesters: [
+        {
+          semesterNumber: 1,
+          subjects: [
+            "Programming Fundamentals",
+            "Mathematics for Computer Science",
+          ],
+        },
+        {
+          semesterNumber: 2,
+          subjects: ["Data Structures and Algorithms", "Computer Architecture"],
+        },
+      ],
+    },
+    {
+      name: "Mechanical Engineering",
+      semesters: [
+        {
+          semesterNumber: 1,
+          subjects: ["Engineering Mechanics", "Engineering Drawing"],
+        },
+        {
+          semesterNumber: 2,
+          subjects: ["Thermodynamics", "Machine Design"],
+        },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -27,7 +56,7 @@ export default function AllPages() {
   const handlePdfSwitch = () => {
     // Function to switch the PDF file
     if (pdfFile === "./sample.pdf") {
-      setPdfFile("./Aditya.D.Mishra.pdf"); // Set the path to the second PDF
+      setPdfFile("./pp1.pdf"); // Set the path to the second PDF
     } else {
       setPdfFile("./sample.pdf"); // Set the path back to the first PDF
     }
@@ -70,9 +99,12 @@ export default function AllPages() {
                 </optgroup>
               ))}
             </select>
+            <select onChange={handlePdfSwitch}>
+              <option value="./sample.pdf">PDF 1</option>
+              <option value="./pp1.pdf">PDF 2</option>
+            </select>
           </div>
         ))}
-        <button onClick={handlePdfSwitch}>Switch PDF</button>
       </div>
       <Document
         file={pdfFile} // Use the selected PDF file
