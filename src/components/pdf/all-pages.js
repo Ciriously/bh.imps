@@ -3,55 +3,35 @@ import { Document, Page } from "react-pdf";
 import "./AllPages.css";
 import Logo from "./bh_logo.png";
 
-export default function AllPages(props) {
+export default function AllPages() {
   const [numPages, setNumPages] = useState(null);
   const [selectedSubject, setSelectedSubject] = useState(null);
+  const [pdfFile, setPdfFile] = useState("./sample.pdf"); // Initial PDF file
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
 
-  const { pdf } = props;
-
   const pageWidth = 800;
   const pageHeight = 1000;
 
   const departments = [
-    {
-      name: "Department 1",
-      semesters: [
-        {
-          semesterNumber: 1,
-          subjects: ["Subject A", "Subject B", "Subject C"],
-        },
-        {
-          semesterNumber: 2,
-          subjects: ["Subject X", "Subject Y", "Subject Z"],
-        },
-        // Add more semesters as needed
-      ],
-    },
-    {
-      name: "Department 2",
-      semesters: [
-        {
-          semesterNumber: 1,
-          subjects: ["Subject 1", "Subject 2", "Subject 3"],
-        },
-        {
-          semesterNumber: 2,
-          subjects: ["Subject I", "Subject II", "Subject III"],
-        },
-        // Add more semesters as needed
-      ],
-    },
-    // Add more departments as needed
+    // Your department data here
   ];
 
   useEffect(() => {
     // Logic to change the displayed subject based on selectedSubject
     // You can set the selected subject in your state and update the component's behavior accordingly
   }, [selectedSubject]);
+
+  const handlePdfSwitch = () => {
+    // Function to switch the PDF file
+    if (pdfFile === "./sample.pdf") {
+      setPdfFile("./Aditya.D.Mishra.pdf"); // Set the path to the second PDF
+    } else {
+      setPdfFile("./sample.pdf"); // Set the path back to the first PDF
+    }
+  };
 
   const pages = Array.from(new Array(numPages), (el, index) => (
     <Page
@@ -92,9 +72,10 @@ export default function AllPages(props) {
             </select>
           </div>
         ))}
+        <button onClick={handlePdfSwitch}>Switch PDF</button>
       </div>
       <Document
-        file={pdf}
+        file={pdfFile} // Use the selected PDF file
         options={{ workerSrc: "/pdf.worker.js" }}
         onLoadSuccess={onDocumentLoadSuccess}
       >
