@@ -63,6 +63,11 @@ const MainTabs = () => {
         "Java Programming",
         "Python Programming",
       ])}
+
+      {/* Add the pdf reader div below the rectangle div */}
+      <div className="pdf-reader">
+        <p>This is the pdf reader div.</p>
+      </div>
     </div>
   );
 };

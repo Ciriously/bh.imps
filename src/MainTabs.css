@@ -30,3 +30,14 @@
 .main-tabs select:nth-child(3) {
   margin-right: 14rem;
 }
+
+.pdf-reader {
+  width: 64rem;
+  height: 69rem;
+  border-radius: 0.875rem;
+  background: #f4f7f8;
+  /* padding: 10px; */
+  border-radius: 0.875rem;
+  margin-top: 80rem;
+  position: absolute;
+}
