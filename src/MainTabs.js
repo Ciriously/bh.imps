@@ -55,6 +55,7 @@ const MainTabs = () => {
         "7",
         "8",
       ])}
+      <span className="subject-label">Subjects:</span>
       {renderDropdownField("subject", [
         "Data Structures",
         "Algorithms",
