@@ -1,0 +1,64 @@
+/* fonts.css */
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url(../public/fonts/Inter-ExtraBold.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-Light";
+  src: url(../public/fonts/Inter-Light.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url(../public/fonts/Inter-Medium.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(../public/fonts/Inter-Regular.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url(../public/fonts/Inter-SemiBold.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(../public/fonts/Inter-Bold.ttf) format("truetype");
+  font-style: normal;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  font-family: "Inter-ExtraBold";
+  background-color: #fff;
+}
+
+.title {
+  color: #363a3f;
+  text-align: center;
+  font-family: "Inter-Bold";
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: 136.523%; /* 3.07175rem */
+  letter-spacing: -0.045rem;
+  color: #363a3f;
+}
+
+.text {
+  color: #8e8e8e;
+  text-align: center;
+  font-family: "Inter-Regular";
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 136.523%; /* 1.36525rem */
+  letter-spacing: -0.02rem;
+}
