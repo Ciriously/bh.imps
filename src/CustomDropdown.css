@@ -76,10 +76,10 @@
   .dropdown-label {
     color: #363a3f;
     text-align: center;
-    font-size: 0.625rem;
+    font-size: 0.7rem;
     line-height: normal;
     letter-spacing: -0.00625rem;
-    margin-right: 0;
+    margin-right: 1.5rem;
     display: block;
   }
 
@@ -91,10 +91,20 @@
   }
 
   .dropdown-box {
-    width: 100%;
+    border-radius: 0.9375rem;
+    background: #fff;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: auto;
+    z-index: 1;
   }
 
   .dropdown-option {
-    margin: 0.5rem;
+    padding: 0rem;
+    margin: 1rem 2rem;
+    color: #333;
+    font-size: 0.625rem;
+    font-family: "Gordita-Regular";
+    transition: font-weight 0.2s;
   }
 }

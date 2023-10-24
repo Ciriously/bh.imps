@@ -70,11 +70,29 @@ export default function MainTabs() {
     />
   ));
 
+  // Determine the shortened university and semester names for mobile mode
+  const isMobile = window.innerWidth <= 768;
+  const responsiveUniversities = isMobile
+    ? ["MU", "GTU"]
+    : ["Mumbai University", "Gujurat Technical University"];
+  const responsiveSemesters = isMobile
+    ? ["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6", "Sem 7", "Sem 8"]
+    : [
+        "Semester 1",
+        "Semester 2",
+        "Semester 3",
+        "Semester 4",
+        "Semester 5",
+        "Semester 6",
+        "Semester 7",
+        "Semester 8",
+      ];
+
   return (
     <div className="main-tabs">
       <CustomDropdown
         label="University"
-        options={universities}
+        options={responsiveUniversities}
         value={selectedOptions.university}
         onChange={(value) =>
           setSelectedOptions({ ...selectedOptions, university: value })
@@ -90,7 +108,7 @@ export default function MainTabs() {
       />
       <CustomDropdown
         label="Semester"
-        options={semesters}
+        options={responsiveSemesters}
         value={selectedOptions.semester}
         onChange={(value) =>
           setSelectedOptions({ ...selectedOptions, semester: value })
@@ -115,7 +133,12 @@ export default function MainTabs() {
             {pages}
           </Document>
         ) : (
-          <p>This is the pdf reader div.</p>
+          <div className="unavailable-text">
+            IMPs are not uploaded yet!!!
+            <br /> Do you need this urgently?
+            <br />
+            <span className="blue-text">DM us on Instagram</span>
+          </div>
         )}
       </div>
     </div>
