@@ -16,7 +16,12 @@ function CustomDropdown({ label, options, value, onChange }) {
 
   return (
     <div className={`custom-dropdown ${isOpen ? "open" : ""}`}>
-      <div className="dropdown-label" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className={`dropdown-label ${
+          label === "Semester" ? "semester-label" : ""
+        } ${label === "Subjects" ? "subjects-label" : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {labelContent}
         <div className="dropdown-icon" onClick={() => setIsOpen(!isOpen)}>
           <img src={dropdownIcon} alt="Dropdown Icon" />
