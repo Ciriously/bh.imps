@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Document, Page } from "react-pdf";
 import "./MainTabs.css";
+import CustomDropdown from "./CustomDropdown"; // Import the custom drop-down component
 
 export default function MainTabs() {
   const [numPages, setNumPages] = useState(null);
@@ -20,6 +21,7 @@ export default function MainTabs() {
   const pageWidth = 800;
   const pageHeight = 1000;
 
+  // Define the options for universities, departments, semesters, and subjects
   const universities = ["University of Mumbai", "University of Pune"];
   const departments = ["Computer Science", "Information Technology"];
   const semesters = [
@@ -36,10 +38,10 @@ export default function MainTabs() {
   // Mapping of subjects to PDF files
   const subjectToPdfMapping = {
     "Data Structures": "./sample.pdf",
-    Algorithms: "/pdfs/algori",
+    Algorithms: "/pdfs/algorithms.pdf",
     "Programming in C++": "/pdfs/cplusplus.pdf",
-    "Java Programming": "./py.pdf",
-    "Python Programming": "./ada.pdf",
+    "Java Programming": "./java.pdf",
+    "Python Programming": "./py.pdf",
   };
 
   useEffect(() => {
@@ -63,72 +65,39 @@ export default function MainTabs() {
 
   return (
     <div className="main-tabs">
-      <select
-        onChange={(e) =>
-          setSelectedOptions({
-            ...selectedOptions,
-            university: e.target.value,
-          })
-        }
+      <CustomDropdown
+        label="University"
+        options={universities}
         value={selectedOptions.university}
-      >
-        <option value="">Select a university</option>
-        {universities.map((university, index) => (
-          <option key={index} value={university}>
-            {university}
-          </option>
-        ))}
-      </select>
-      <select
-        onChange={(e) =>
-          setSelectedOptions({
-            ...selectedOptions,
-            department: e.target.value,
-          })
+        onChange={(value) =>
+          setSelectedOptions({ ...selectedOptions, university: value })
         }
+      />
+      <CustomDropdown
+        label="Department"
+        options={departments}
         value={selectedOptions.department}
-      >
-        <option value="">Select a department</option>
-        {departments.map((department, index) => (
-          <option key={index} value={department}>
-            {department}
-          </option>
-        ))}
-      </select>
-      <select
-        onChange={(e) =>
-          setSelectedOptions({
-            ...selectedOptions,
-            semester: e.target.value,
-          })
+        onChange={(value) =>
+          setSelectedOptions({ ...selectedOptions, department: value })
         }
+      />
+      <CustomDropdown
+        label="Semester"
+        options={semesters}
         value={selectedOptions.semester}
-      >
-        <option value="">Select a semester</option>
-        {semesters.map((semester, index) => (
-          <option key={index} value={semester}>
-            {semester}
-          </option>
-        ))}
-      </select>
-      <span className="subject-label">Subjects:</span>
-      <select
-        id="subject"
-        onChange={(e) =>
-          setSelectedOptions({
-            ...selectedOptions,
-            subject: e.target.value,
-          })
+        onChange={(value) =>
+          setSelectedOptions({ ...selectedOptions, semester: value })
         }
+      />
+      <span className="subject-label">Subjects:</span>
+      <CustomDropdown
+        label="Subject"
+        options={Object.keys(subjectToPdfMapping)}
         value={selectedOptions.subject}
-      >
-        <option value="">Select a subject</option>
-        {Object.keys(subjectToPdfMapping).map((subject, index) => (
-          <option key={index} value={subject}>
-            {subject}
-          </option>
-        ))}
-      </select>
+        onChange={(value) =>
+          setSelectedOptions({ ...selectedOptions, subject: value })
+        }
+      />
       <div className="pdf-reader">
         {pdfFile ? (
           <Document

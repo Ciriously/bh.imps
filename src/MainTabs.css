@@ -17,18 +17,28 @@
   background-color: #f4f7f8;
   font-family: "Inter-Medium";
   font-size: 0.875rem;
+  border-radius: 0.25rem; /* added border radius */
 }
 
 .main-tabs select:focus {
   outline: none;
 }
+
 .main-tabs .subject-label {
   font-family: "Inter-Bold";
   margin-right: 10px;
   font-size: 0.875rem;
 }
+
 .main-tabs select:nth-child(3) {
   margin-right: 14rem;
+}
+
+select option {
+  padding: 45px;
+  font-size: 0.9rem;
+  border-radius: 1.25rem;
+  border: none; /* removed border */
 }
 
 .pdf-reader {
@@ -37,7 +47,6 @@
   border-radius: 0.875rem;
   background: #f4f7f8;
   flex-shrink: 0;
-  /* padding: 10px; */
   border-radius: 0.875rem;
   margin-top: 80rem;
   position: absolute;
