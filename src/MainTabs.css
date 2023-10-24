@@ -36,6 +36,7 @@
   height: 69rem;
   border-radius: 0.875rem;
   background: #f4f7f8;
+  flex-shrink: 0;
   /* padding: 10px; */
   border-radius: 0.875rem;
   margin-top: 80rem;

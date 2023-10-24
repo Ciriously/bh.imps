@@ -17,3 +17,6 @@ If you'd like to contribute to the Bh.imps PDF Viewer, feel free to submit a pul
 ## License
 
 The Bh.imps PDF Viewer is licensed under the MIT License. See LICENSE.md for more information.
+
+dloca m3 chart numbers and functions
+IT -
