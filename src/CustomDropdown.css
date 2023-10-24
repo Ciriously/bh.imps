@@ -2,7 +2,7 @@
 
 .custom-dropdown {
   display: inline-block;
-  margin-right: 20px;
+  position: relative;
 }
 
 .dropdown-label {
@@ -10,18 +10,24 @@
   border: none;
   padding: 5px 8px;
   color: #363a3f;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: "Inter-Medium";
+  font-size: 0.9rem;
+  font-family: "Gordita-Medium";
   margin-right: 4rem;
+  display: flex; /* Use flex to align label and icon horizontally */
+  align-items: center; /* Vertically align label and icon */
 }
 
 .dropdown-label.open {
   background-color: #f0f0f0;
 }
+
 .dropdown-icon {
-  margin-left: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem; /* Adjust padding as needed for spacing */
 }
+
 .dropdown-box {
   border-radius: 0.9375rem;
   background: #fff;
@@ -31,20 +37,61 @@
   z-index: 1;
 }
 
+.options {
+  display: none;
+}
+
 .dropdown-option {
   padding: 0.5rem;
   margin: 1rem 2rem;
   color: #333;
   font-size: 0.9rem;
-  font-family: "Inter-Regular", sans-serif;
-  transition: font-weight 0.2s; /* Add transition for font-weight */
+  font-family: "Gordita-Regular";
+  transition: font-weight 0.2s;
 }
 
 /* Apply the hover effect */
 .dropdown-option:hover {
   background-color: #f3f3ff;
-  font-family: "Inter-Bold"; /* Set font weight to bold on hover */
-  width: auto; /* Decrease the width of the hover effect */
+  font-family: "Gordita-Bold";
+  width: auto;
   color: #6658d3;
   border-radius: 0.7rem;
+}
+
+/* Show options when dropdown is open */
+.custom-dropdown.open .dropdown-box {
+  display: block;
+}
+@media (max-width: 768px) {
+  /* Dropdown menu */
+  .custom-dropdown {
+    display: block;
+    margin-right: 0;
+  }
+
+  .dropdown-label {
+    color: #363a3f;
+    text-align: center;
+    font-size: 0.625rem;
+    line-height: normal;
+    letter-spacing: -0.00625rem;
+    margin-right: 0;
+    display: block;
+  }
+
+  .dropdown-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .dropdown-box {
+    width: 100%;
+  }
+
+  .dropdown-option {
+    margin: 0.5rem;
+  }
 }

@@ -15,15 +15,12 @@ function CustomDropdown({ label, options, value, onChange }) {
   const labelContent = selectedOption ? selectedOption : label;
 
   return (
-    <div className="custom-dropdown">
-      <div
-        className={`dropdown-label ${isOpen ? "open" : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+    <div className={`custom-dropdown ${isOpen ? "open" : ""}`}>
+      <div className="dropdown-label" onClick={() => setIsOpen(!isOpen)}>
         {labelContent}
-        <span style={{ marginLeft: "4px" }}>
+        <div className="dropdown-icon" onClick={() => setIsOpen(!isOpen)}>
           <img src={dropdownIcon} alt="Dropdown Icon" />
-        </span>
+        </div>
       </div>
       {isOpen && (
         <div className="dropdown-box">

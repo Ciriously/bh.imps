@@ -22,8 +22,15 @@ export default function MainTabs() {
   const pageHeight = 1000;
 
   // Define the options for universities, departments, semesters, and subjects
-  const universities = ["University of Mumbai", "University of Pune"];
-  const departments = ["Computer Science", "Information Technology"];
+  const universities = ["Mumbai University", "Gujurat Technical University"];
+  const departments = [
+    "Computer Science",
+    "Information Technology",
+    "ECE",
+    "EEE",
+    "Mechanical",
+    "Civil",
+  ];
   const semesters = [
     "Semester 1",
     "Semester 2",
