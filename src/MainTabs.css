@@ -13,7 +13,7 @@
 .main-tabs select {
   border: 1px solid #f4f7f8;
   margin: 10px;
-  width: 200px;
+  width: 12.5rem;
   background-color: #f4f7f8;
   font-family: "Inter-Medium";
   font-size: 0.875rem;
@@ -50,4 +50,13 @@ select option {
   border-radius: 0.875rem;
   margin-top: 80rem;
   position: absolute;
+}
+@media (max-width: 768px) {
+  .main-tabs {
+    flex-direction: column; /* Stack tabs vertically on smaller screens */
+  }
+
+  .main-tabs select {
+    width: 100%; /* Make the select boxes full width on smaller screens */
+  }
 }

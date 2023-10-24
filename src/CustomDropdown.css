@@ -2,20 +2,20 @@
 
 .custom-dropdown {
   display: inline-block;
-  margin-right: 20px; /* Add spacing between dropdown labels */
+  margin-right: 20px;
 }
 
 .dropdown-label {
   cursor: pointer;
-  border: none; /* Remove the border */
-  padding: 5px 8px; /* Decrease the padding */
-  color: #363a3f; /* Set text color for the label */
-  font-size: 14px; /* Set font size for the label text */
-  font-weight: 500; /* Set font weight to "Inter-Medium" */
-  font-family: "Inter-Medium"; /* Use the "Inter" font family */
-  margin-right: 4rem; /* Add margin spacing to the right of the label text */
+  border: none;
+  padding: 5px 8px;
+  color: #363a3f;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter-Medium";
+  margin-right: 4rem;
 }
-/* Apply the same style when the dropdown is open */
+
 .dropdown-label.open {
   background-color: #f0f0f0;
 }
@@ -27,16 +27,16 @@
   background: #fff;
   box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.2);
   position: absolute;
-  width: auto; /* Adjust the width as needed */
+  width: auto;
   z-index: 1;
 }
 
 .dropdown-option {
-  padding: 0.5rem; /* Increase the padding for options */
-  margin: 1rem 2rem; /* Add margin to options */
-  color: #333; /* Set text color for the options */
-  font-size: 0.9rem; /* Set font size for the option text */
-  font-family: "Inter-Regular", sans-serif; /* Use the "Inter" font family */
+  padding: 0.5rem;
+  margin: 1rem 2rem;
+  color: #333;
+  font-size: 0.9rem;
+  font-family: "Inter-Regular", sans-serif;
   transition: font-weight 0.2s; /* Add transition for font-weight */
 }
 
@@ -46,4 +46,5 @@
   font-family: "Inter-Bold"; /* Set font weight to bold on hover */
   width: auto; /* Decrease the width of the hover effect */
   color: #6658d3;
+  border-radius: 0.7rem;
 }
