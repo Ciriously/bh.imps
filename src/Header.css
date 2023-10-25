@@ -62,3 +62,32 @@
   line-height: 136.523%; /* 1.36525rem */
   letter-spacing: -0.02rem;
 }
+@media only screen and (max-width: 360px) {
+  .header {
+    text-align: center;
+    padding: 20px;
+    font-family: "Inter-ExtraBold";
+    background-color: #fff;
+  }
+
+  .title {
+    color: #363a3f;
+    text-align: center;
+    font-family: "Inter-Bold";
+    font-size: 2.25rem;
+    font-style: normal;
+    line-height: 136.523%; /* 3.07175rem */
+    letter-spacing: -0.045rem;
+    color: #363a3f;
+  }
+
+  .text {
+    color: #8e8e8e;
+    text-align: center;
+    font-family: "Inter-Regular";
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 136.523%; /* 1.36525rem */
+    letter-spacing: -0.02rem;
+  }
+}

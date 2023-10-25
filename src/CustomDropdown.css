@@ -64,22 +64,29 @@
   color: #6658d3;
   border-radius: 0.7rem;
 }
+
 .semester-label,
 .subjects-label {
   margin-right: 12rem;
 }
+
 /* Show options when dropdown is open */
 .custom-dropdown.open .dropdown-box {
   display: block;
 }
 
-@media (max-width: 768px) {
-  /* Dropdown menu */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+    height: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
   .custom-dropdown {
     display: block;
-    margin-right: 0;
+    margin: 0 auto; /* Center the dropdown horizontally */
   }
-
   .dropdown-label {
     color: #363a3f;
     font-size: 0.7rem;
@@ -100,9 +107,12 @@
     border-radius: 0.9375rem;
     background: #fff;
     box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    width: auto;
-    z-index: 3;
+    position: fixed; /* Make it fixed for centering */
+    top: 35%; /* Align to the vertical center of the screen */
+    left: 33%; /* Align to the horizontal center of the screen */
+    transform: translate(-50%, -50%); /* Center the box */
+    z-index: 6; /* Ensure it's above other content */
+    margin: 0;
   }
 
   .dropdown-option {
@@ -113,6 +123,11 @@
     font-family: "Gordita-Regular";
     transition: font-weight 0.2s;
     text-align: left; /* Make the text left-aligned for smaller screens */
+    width: 70vw;
+    height: auto;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add an ellipsis (...) for overflow */
   }
 
   @media only screen and (max-width: 360px) {
@@ -120,7 +135,7 @@
 
     .custom-dropdown {
       display: block;
-      margin-right: 0;
+      margin: 0 auto; /* Center the dropdown horizontally */
     }
 
     .dropdown-label {
@@ -150,11 +165,23 @@
       border-radius: 0.9375rem;
       background: #fff;
       box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.2);
-      position: absolute;
+      position: fixed;
       right: -150px !important;
-      width: auto;
-      z-index: 6;
+      width: 100vw;
+      top: 40%; /* Align to the vertical center of the screen */
+      left: 30%; /* Align to the horizontal center of the screen */
+      transform: translate(-50%, -50%); /* Center the box */
+      z-index: 6; /* Ensure it's above other content */
       margin: 0;
     }
   }
 }
+
+/* Additional Media Queries for Other Screen Sizes as Needed */
+/* For example:
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+*/

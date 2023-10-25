@@ -18,6 +18,13 @@
   src: url("../public/fonts/Gordita-Bold.ttf") format("truetype");
   font-style: normal;
 }
+body {
+  width: 100vw;
+  height: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
 /* .App {
   font-family: sans-serif;
   text-align: center;
@@ -56,5 +63,5 @@ hr {
   height: 100%;
   max-height: 800px;
   overflow: auto;
-  padding-right: 23rem;
+  padding-right: 0;
 }
