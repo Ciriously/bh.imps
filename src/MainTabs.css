@@ -119,10 +119,11 @@ select option {
       display: none;
     }
     .pdf-reader {
-      width: 23.5625rem;
-      height: 43.5625rem;
+      width: 22rem;
+      height: 100%;
       flex-shrink: 0;
       margin-bottom: 28rem;
+      margin-right: 0.5rem;
     }
     .unavailable-text {
       color: #8e8e8e;
