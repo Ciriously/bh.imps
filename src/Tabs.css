@@ -36,9 +36,11 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.84rem;
+  text-align: n;
   border-radius: 25px;
   cursor: pointer;
+  margin-left: 1.6rem;
   font-family: "Gordita-Medium";
   transition: color 0.25s ease-in;
   padding: 0 1rem; /* Add padding to create distance between tabs */
@@ -70,21 +72,21 @@ input[type="radio"]:checked + label > .notification {
 
 /* Use transform to create distance between tabs */
 input[id="radio-1"]:checked ~ .glider {
-  transform: translateX(0);
+  transform: translateX(10%);
 }
 
 input[id="radio-2"]:checked ~ .glider {
-  transform: translateX(100%);
+  transform: translateX(110%);
 }
 
 input[id="radio-3"]:checked ~ .glider {
-  transform: translateX(200%);
+  transform: translateX(220%);
 }
 
 input[id="radio-4"]:checked ~ .glider {
-  transform: translateX(300%);
+  transform: translateX(330%);
 }
 
 input[id="radio-5"]:checked ~ .glider {
-  transform: translateX(400%);
+  transform: translateX(445%);
 }
