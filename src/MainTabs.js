@@ -124,6 +124,7 @@ export default function MainTabs() {
         }
       />
       <div className="pdf-reader">
+        {/* <Tabs /> */}
         {pdfFile ? (
           <Document
             file={pdfFile}

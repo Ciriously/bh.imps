@@ -6,7 +6,7 @@ function Bhimps() {
   return (
     <div>
       <Header />
-      <MainTabs /> {/* Include the MainTab component */}
+      <MainTabs />
     </div>
   );
 }

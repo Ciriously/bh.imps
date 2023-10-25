@@ -114,4 +114,47 @@
     transition: font-weight 0.2s;
     text-align: left; /* Make the text left-aligned for smaller screens */
   }
+
+  @media only screen and (max-width: 360px) {
+    /* Additional styles for screens up to 360px */
+
+    .custom-dropdown {
+      display: block;
+      margin-right: 0;
+    }
+
+    .dropdown-label {
+      /* Make adjustments for the dropdown label */
+      overflow: auto; /* Enable horizontal scrolling for the label */
+      white-space: nowrap; /* Prevent text from wrapping */
+      margin-right: 1rem; /* Adjust the right margin as needed */
+    }
+    .options {
+      display: none;
+    }
+
+    .dropdown-option {
+      padding: 0.8rem;
+      margin: 1rem 1rem;
+      color: #363a3f;
+      font-size: 0.9rem;
+      font-family: "Gordita-Regular";
+      transition: font-weight 0.2s;
+      text-align: left;
+      width: auto;
+      white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Hide any overflowing text */
+      text-overflow: ellipsis; /* Add an ellipsis (...) for overflow */
+    }
+    .dropdown-box {
+      border-radius: 0.9375rem;
+      background: #fff;
+      box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      right: -150px !important;
+      width: auto;
+      z-index: 1;
+      margin: 0;
+    }
+  }
 }
