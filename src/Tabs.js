@@ -8,6 +8,8 @@ function Tabs() {
     setSelectedTab(tabId);
   };
 
+  const isMobileView = window.innerWidth <= 768;
+
   return (
     <div className="container">
       <div className="tabs">
@@ -22,7 +24,7 @@ function Tabs() {
           htmlFor="radio-1"
           className={`tab ${selectedTab === "radio-1" ? "active" : ""}`}
         >
-          UT II - IMPs
+          {isMobileView ? "UT-II" : "UT II - IMPs"}
         </label>
 
         <input
@@ -36,7 +38,7 @@ function Tabs() {
           htmlFor="radio-2"
           className={`tab ${selectedTab === "radio-2" ? "active" : ""}`}
         >
-          VIVA IMPs
+          {isMobileView ? "VIVAs" : "VIVA IMPs"}
         </label>
 
         <input
@@ -50,7 +52,7 @@ function Tabs() {
           htmlFor="radio-3"
           className={`tab ${selectedTab === "radio-3" ? "active" : ""}`}
         >
-          IMP Modules
+          {isMobileView ? "Modules" : "IMP Modules"}
         </label>
 
         <input
@@ -64,7 +66,7 @@ function Tabs() {
           htmlFor="radio-4"
           className={`tab ${selectedTab === "radio-4" ? "active" : ""}`}
         >
-          IMP Topics
+          {isMobileView ? "Topics" : "IMP Topics"}
         </label>
 
         <input
@@ -78,7 +80,7 @@ function Tabs() {
           htmlFor="radio-5"
           className={`tab ${selectedTab === "radio-5" ? "active" : ""}`}
         >
-          IMP Questions
+          {isMobileView ? "End Sem" : "IMP Questions"}
         </label>
 
         <span className="glider"></span>
