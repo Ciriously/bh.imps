@@ -13,8 +13,8 @@
   font-size: 0.9rem;
   font-family: "Gordita-Medium";
   margin-right: 3rem;
-  display: flex; /* Use flex to align label and icon horizontally */
-  align-items: center; /* Vertically align label and icon */
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-label.open {
@@ -25,7 +25,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding-left: 1rem; /* Adjust padding as needed for spacing */
+  padding-left: 1rem;
 }
 
 .dropdown-box {
@@ -42,30 +42,37 @@
 }
 
 .dropdown-option {
-  padding: 0.5rem;
-  margin: 1rem 2rem;
-  color: #333;
+  padding: 0.8rem;
+  margin: 1rem 1rem;
+  color: #363a3f;
   font-size: 0.9rem;
   font-family: "Gordita-Regular";
   transition: font-weight 0.2s;
+  text-align: left;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflowing text */
+  text-overflow: ellipsis; /* Add an ellipsis (...) for overflow */
 }
 
 /* Apply the hover effect */
 .dropdown-option:hover {
   background-color: #f3f3ff;
-  font-family: "Gordita-Bold";
-  width: auto;
+  font-family: "Gordita-Medium";
+  width: 65%;
+  height: 1.2rem;
+  flex-shrink: 0;
   color: #6658d3;
   border-radius: 0.7rem;
 }
 .semester-label,
 .subjects-label {
-  margin-right: 12rem; /* Add margin to separate "Semester" and "Subjects" labels */
+  margin-right: 12rem;
 }
 /* Show options when dropdown is open */
 .custom-dropdown.open .dropdown-box {
   display: block;
 }
+
 @media (max-width: 768px) {
   /* Dropdown menu */
   .custom-dropdown {
@@ -75,7 +82,6 @@
 
   .dropdown-label {
     color: #363a3f;
-    text-align: center;
     font-size: 0.7rem;
     line-height: normal;
     letter-spacing: -0.00625rem;
@@ -106,5 +112,6 @@
     font-size: 0.625rem;
     font-family: "Gordita-Regular";
     transition: font-weight 0.2s;
+    text-align: left; /* Make the text left-aligned for smaller screens */
   }
 }
