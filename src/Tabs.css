@@ -156,11 +156,11 @@ input[id="radio-5"]:checked ~ .glider {
 @media only screen and (max-width: 360px) {
   .container {
     margin-left: -1rem;
-    margin-top: 0.3rem;
+    margin-top: -1rem;
   }
 
   .tabs {
-    width: 23rem;
+    width: 21rem;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -168,11 +168,11 @@ input[id="radio-5"]:checked ~ .glider {
     font-size: 0.84rem;
     border-radius: 25px;
     cursor: pointer;
-    margin-left: 0.1rem;
+    margin-left: 1.2rem;
     margin-top: 2rem;
     font-family: "Gordita-Medium";
     transition: color 0.25s ease-in;
-    padding: -1rem -2rem;
+    /* padding: 1rem-3rem; */
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide any overflow */
     text-overflow: ellipsis;
@@ -196,22 +196,22 @@ input[id="radio-5"]:checked ~ .glider {
   }
 
   input[id="radio-4"]:checked ~ .glider {
-    transform: translateX(330%);
+    transform: translateX(340%);
   }
 
   input[id="radio-5"]:checked ~ .glider {
-    transform: translateX(440%);
+    transform: translateX(475%);
   }
   .glider {
     position: absolute;
     display: flex;
-    width: 4rem;
+    width: 3.5rem;
     height: 2rem;
     flex-shrink: 0;
     border-radius: 1rem;
     background: #6658d3;
     margin-top: 0.3rem;
-    margin-left: -18.5rem;
+    margin-left: -16.5rem;
     z-index: 1;
     transition: 0.25s ease-out;
   }
