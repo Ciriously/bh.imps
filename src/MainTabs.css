@@ -1,6 +1,7 @@
 .main-tabs {
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   background-color: #f4f7f8;
@@ -72,7 +73,7 @@ select option {
 }
 @media (max-width: 768px) {
   .main-tabs {
-    width: 100%;
+    width: 85vw;
     margin-left: 1rem;
     flex-direction: row; /* Stack tabs vertically on smaller screens */
   }
@@ -84,7 +85,7 @@ select option {
     display: none;
   }
   .pdf-reader {
-    width: 23.5625rem;
+    width: 85vw;
     height: 43.5625rem;
     flex-shrink: 0;
     margin-bottom: 28rem;
@@ -107,7 +108,7 @@ select option {
   }
   @media only screen and (max-width: 360px) {
     .main-tabs {
-      width: 100%;
+      width: 80%;
       margin-left: 0.1rem;
       flex-direction: row; /* Stack tabs vertically on smaller screens */
     }

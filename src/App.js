@@ -1,7 +1,6 @@
 import React from "react";
 import AllPages from "./components/pdf/all-pages";
 import Bhimps from "./bhimps";
-import Tabs from "./Tabs";
 
 import "./styles.css";
 
@@ -10,7 +9,7 @@ export default function App() {
     <div className="App">
       <Bhimps />
       {/* Your other content */}
-      <Tabs />
+
       {/* More content */}
 
       {/* <h4></h4> */}
