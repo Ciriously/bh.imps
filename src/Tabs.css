@@ -1,11 +1,12 @@
+/* Tabs.css */
 .container {
   position: absolute;
   width: 40.375rem;
   height: 3.75rem;
   flex-shrink: 0;
   display: flex;
-  margin-top: 1rem;
-  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-left: 11rem;
 }
 
 .tabs {
@@ -91,21 +92,21 @@ input[id="radio-5"]:checked ~ .glider {
 }
 @media (max-width: 768px) {
   .container {
-    margin-right: 0;
-    margin-top: 0;
+    margin-left: 1rem;
+    margin-top: 1rem;
   }
 
   .tabs {
-    width: 100vw;
+    width: 20rem;
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.84rem;
+    font-size: 0.7rem;
     border-radius: 25px;
     cursor: pointer;
-    margin-left: -10rem;
-    margin-top: 1rem;
+    margin-left: 0rem;
+    margin-top: 0.2rem;
     font-family: "Gordita-Medium";
     transition: color 0.25s ease-in;
     padding: -1rem -2rem;
@@ -117,7 +118,7 @@ input[id="radio-5"]:checked ~ .glider {
 
   .tab {
     margin-left: 0.4rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   input[id="radio-1"]:checked ~ .glider {
     transform: translateX(0%);
@@ -159,7 +160,7 @@ input[id="radio-5"]:checked ~ .glider {
   }
 
   .tabs {
-    width: 100vw;
+    width: 21rem;
     height: 3rem;
     display: flex;
     justify-content: center;
