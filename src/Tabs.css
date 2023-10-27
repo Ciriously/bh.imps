@@ -167,7 +167,7 @@ input[id="radio-5"]:checked ~ .glider {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.84rem;
+    font-size: 0.74rem;
     border-radius: 25px;
     cursor: pointer;
     margin-left: 1.2rem;
@@ -183,37 +183,37 @@ input[id="radio-5"]:checked ~ .glider {
 
   .tab {
     margin-left: 0.1rem;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
   input[id="radio-1"]:checked ~ .glider {
     transform: translateX(0%);
   }
 
   input[id="radio-2"]:checked ~ .glider {
-    transform: translateX(95%);
+    transform: translateX(100%);
   }
 
   input[id="radio-3"]:checked ~ .glider {
-    transform: translateX(218%);
+    transform: translateX(229%);
   }
 
   input[id="radio-4"]:checked ~ .glider {
-    transform: translateX(340%);
+    transform: translateX(360%);
   }
 
   input[id="radio-5"]:checked ~ .glider {
-    transform: translateX(475%);
+    transform: translateX(490%);
   }
   .glider {
     position: absolute;
     display: flex;
-    width: 3.5rem;
+    width: 3.4rem;
     height: 2rem;
     flex-shrink: 0;
     border-radius: 1rem;
     background: #6658d3;
     margin-top: 0.3rem;
-    margin-left: -16.5rem;
+    margin-left: -17rem;
     z-index: 1;
     transition: 0.25s ease-out;
   }
