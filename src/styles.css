@@ -33,6 +33,8 @@ body {
 .react-pdf__Page {
   margin-top: 4rem;
   margin-left: 10rem;
+  justify-content: center;
+  align-items: center;
 }
 .react-pdf__Page__textContent {
   border: 1px solid darkgrey;
@@ -71,6 +73,29 @@ body {
       transform: scale(0.5); /* Adjust the scale factor for smaller screens */
       transform-origin: top left;
       margin-left: -2.5rem;
+      margin-top: 1rem;
+    }
+
+    .all-page-container {
+      max-height: none;
+      transform: scale(0.1); /* Adjust the scale factor for smaller screens */
+    }
+    .react-pdf__Page__textContent {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px),
+    only screen and (min-width: 600px) and (max-width: 767px),
+    only screen and (min-width: 768px) and (max-width: 834px) and (orientation: portrait),
+    only screen and (min-width: 768px) and (max-width: 834px) and (orientation: landscape),
+    only screen and (min-width: 600) and (max-width: 840px) and (orientation: portrait),
+    only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
+    .react-pdf__Page {
+      width: 100%;
+      transform: scale(0.8); /* Adjust the scale factor for smaller screens */
+      transform-origin: top left;
+      margin-left: 0.5rem;
       margin-top: 1rem;
     }
 

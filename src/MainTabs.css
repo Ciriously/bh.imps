@@ -74,9 +74,9 @@ select option {
 }
 .pdf-container {
   width: 57%; /* Set the desired width */
-  height: 69rem; /* Set the desired height */
+  height: 80rem; /* Set the desired height */
   border-radius: 0.875rem;
-  margin-top: 80rem;
+  margin-top: 95rem;
   background: #f4f7f8;
   overflow: auto; /* Enable scrolling when content overflows */
   position: absolute;
@@ -97,7 +97,7 @@ select option {
 @media (max-width: 768px) {
   .main-tabs {
     width: 100%;
-    margin-left: 0.5rem;
+    margin-left: 0rem;
     margin-right: 0;
     flex-direction: row; /* Stack tabs vertically on smaller screens */
   }
@@ -108,14 +108,14 @@ select option {
   .main-tabs .subject-label {
     display: none;
   }
-  .pdf-reader {
+  /* .pdf-reader {
     width: 100vw;
     height: 200vw;
     flex-shrink: 0;
     margin-bottom: 21rem;
-  }
+  } */
   .pdf-container {
-    width: 100%; /* Set the desired width */
+    width: 88%; /* Set the desired width */
     height: 69rem; /* Set the desired height */
     border-radius: 0.875rem;
     margin-top: 80rem;
@@ -129,31 +129,6 @@ select option {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  .tabs-wrapper {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent text from wrapping */
-  }
-
-  .scrollable-content {
-    display: flex; /* Ensure it's a flex container */
-  }
-
-  .scrollable-content .tab {
-    flex: 0 0 150px; /* Set a fixed width for each tab */
-    margin: 0 10px; /* Add margin between tabs */
-  }
-  /* Add these styles to hide the scrollbar */
-  .tabs-wrapper::-webkit-scrollbar {
-    width: 0.25rem; /* Adjust the width to hide it completely */
-  }
-
-  .tabs-wrapper::-webkit-scrollbar-thumb {
-    background: transparent; /* Make the thumb (dragging part) transparent */
-  }
-
-  .tabs-wrapper::-webkit-scrollbar-track {
-    background: transparent; /* Make the track (bar) transparent */
   }
 
   .blue-text {
@@ -211,7 +186,7 @@ select option {
     only screen and (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
     .main-tabs {
       width: 95%;
-      margin-left: 2rem;
+      margin-left: 0rem;
       flex-direction: row; /* Stack tabs vertically on smaller screens */
     }
 
@@ -221,12 +196,10 @@ select option {
     .main-tabs .subject-label {
       display: none;
     }
-    .pdf-reader {
-      width: 95%;
-      height: 80%;
-      flex-shrink: 0;
-      margin-bottom: 15rem;
-      margin-right: 0.5rem;
+    .pdf-container {
+      width: 89%; /* Set the desired width */
+      height: 69rem; /* Set the desired height */
+      border-radius: 0.875rem;
     }
     .unavailable-text {
       color: #8e8e8e;
