@@ -12,3 +12,8 @@ drop down should close as arrow moves out or 1 drop at time
 Create a div for the tabs
 padding of arrow in mobile view
 create a div for main content and add margin auto
+
+1.VIVA
+2 IMP Topic
+3 IMP Ques
+4 Prac paper

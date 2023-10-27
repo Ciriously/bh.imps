@@ -25,29 +25,20 @@ body {
   margin: 0;
   padding: 0;
 }
-/* .App {
+.App {
   font-family: sans-serif;
   text-align: center;
 }
 
-h4 {
-  text-align: left;
-  margin-left: 40px;
-}
-
-hr {
-  border-top: 2px dotted #3f51b5;
-  margin-bottom: 20px;
-} */
-
-/* For pdf */
 .react-pdf__Page {
-  margin-top: 10px;
+  margin-top: 4rem;
+  margin-left: 10rem;
 }
 .react-pdf__Page__textContent {
   border: 1px solid darkgrey;
   box-shadow: 5px 5px 5px 1px #ccc;
   border-radius: 5px;
+  margin-top: -1.7rem;
 }
 
 .react-pdf__Page__annotations.annotationLayer {
@@ -58,10 +49,34 @@ hr {
   margin: 0 auto;
 }
 
-/* For all pages */
-.all-page-container {
-  height: 100%;
-  max-height: 800px;
-  overflow: auto;
-  padding-right: 0;
+@media (max-width: 768px) {
+  .react-pdf__Page {
+    width: 100%;
+    transform: scale(0.5); /* Adjust the scale factor for smaller screens */
+    transform-origin: top left;
+  }
+
+  .all-page-container {
+    max-height: none;
+    transform: scale(0.1); /* Adjust the scale factor for smaller screens */
+  }
+  .react-pdf__Page__textContent {
+    display: none;
+  }
+  @media (max-width: 360px) {
+    .react-pdf__Page {
+      width: 100%;
+      transform: scale(0.5); /* Adjust the scale factor for smaller screens */
+      transform-origin: top left;
+      margin-left: 0rem;
+    }
+
+    .all-page-container {
+      max-height: none;
+      transform: scale(0.1); /* Adjust the scale factor for smaller screens */
+    }
+    .react-pdf__Page__textContent {
+      display: none;
+    }
+  }
 }

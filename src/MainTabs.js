@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Document, Page } from "react-pdf";
 import "./MainTabs.css";
-import CustomDropdown from "./CustomDropdown"; // Import the custom drop-down component
+import CustomDropdown from "./CustomDropdown";
 import Tabs from "./Tabs";
 
 export default function MainTabs() {
@@ -22,7 +22,6 @@ export default function MainTabs() {
   const pageWidth = 800;
   const pageHeight = 1000;
 
-  // Define the options for universities, departments, semesters, and subjects
   const universities = ["Mumbai University", "Gujurat Technical University"];
   const departments = [
     "Computer Science",
@@ -43,7 +42,6 @@ export default function MainTabs() {
     "Semester 8",
   ];
 
-  // Mapping of subjects to PDF files
   const subjectToPdfMapping = {
     "Data Structures": "./sample.pdf",
     Algorithms: "/pdfs/algorithms.pdf",
@@ -75,7 +73,7 @@ export default function MainTabs() {
   const isMobile = window.innerWidth <= 768;
   const responsiveUniversities = isMobile
     ? ["MU", "GTU"]
-    : ["Mumbai University", "Gujurat Technical University"];
+    : ["Mumbai University", "Gujarat Technical University"];
   const responsiveSemesters = isMobile
     ? ["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6", "Sem 7", "Sem 8"]
     : [
@@ -124,8 +122,8 @@ export default function MainTabs() {
           setSelectedOptions({ ...selectedOptions, subject: value })
         }
       />
-      <div className="pdf-reader">
-        <Tabs />
+      <Tabs />
+      <div className="pdf-container">
         {pdfFile ? (
           <Document
             file={pdfFile}

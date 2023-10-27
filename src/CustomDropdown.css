@@ -10,7 +10,7 @@
   border: none;
   padding: 5px 8px;
   color: #363a3f;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: "Gordita-Medium";
   margin-right: 3rem;
   display: flex;
@@ -100,7 +100,7 @@
 
   .dropdown-icon {
     position: absolute;
-    right: 15%;
+    right: 5%;
     top: 50%;
     transform: translateY(-50%);
   }

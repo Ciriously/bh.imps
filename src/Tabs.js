@@ -24,7 +24,7 @@ function Tabs() {
           htmlFor="radio-1"
           className={`tab ${selectedTab === "radio-1" ? "active" : ""}`}
         >
-          {isMobileView ? "UT-II" : "UT II - IMPs"}
+          {isMobileView ? "VIVAs" : "VIVAs"}
         </label>
 
         <input
@@ -38,7 +38,7 @@ function Tabs() {
           htmlFor="radio-2"
           className={`tab ${selectedTab === "radio-2" ? "active" : ""}`}
         >
-          {isMobileView ? "VIVAs" : "VIVA IMPs"}
+          {isMobileView ? "IMP Topics" : "IMP Topics"}
         </label>
 
         <input
@@ -52,7 +52,7 @@ function Tabs() {
           htmlFor="radio-3"
           className={`tab ${selectedTab === "radio-3" ? "active" : ""}`}
         >
-          {isMobileView ? "Modules" : "IMP Modules"}
+          {isMobileView ? "IMP Ques" : "IMP Questions"}
         </label>
 
         <input
@@ -66,21 +66,7 @@ function Tabs() {
           htmlFor="radio-4"
           className={`tab ${selectedTab === "radio-4" ? "active" : ""}`}
         >
-          {isMobileView ? "Topics" : "IMP Topics"}
-        </label>
-
-        <input
-          type="radio"
-          name="tabs"
-          id="radio-5"
-          checked={selectedTab === "radio-5"}
-          onChange={() => handleTabChange("radio-5")}
-        />
-        <label
-          htmlFor="radio-5"
-          className={`tab ${selectedTab === "radio-5" ? "active" : ""}`}
-        >
-          {isMobileView ? "End Sem" : "IMP Questions"}
+          {isMobileView ? "Prac papers" : "Practice papers"}
         </label>
 
         <span className="glider"></span>
