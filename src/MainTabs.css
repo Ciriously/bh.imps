@@ -127,7 +127,6 @@ select option {
       height: 100%;
       flex-shrink: 0;
       margin-bottom: 28rem;
-      margin-right: 0.5rem;
     }
     .unavailable-text {
       color: #8e8e8e;
