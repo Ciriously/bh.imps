@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Document, Page } from "react-pdf";
 import "./MainTabs.css";
 import CustomDropdown from "./CustomDropdown"; // Import the custom drop-down component
-import Tabs from "./Tabs";
+// import Tabs from "./Tabs";
 
 export default function MainTabs() {
   const [numPages, setNumPages] = useState(null);
@@ -125,7 +125,7 @@ export default function MainTabs() {
         }
       />
       <div className="pdf-reader">
-        <Tabs />
+        {/* <Tabs /> */}
         {pdfFile ? (
           <Document
             file={pdfFile}

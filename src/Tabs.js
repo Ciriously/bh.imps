@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Tabs.css"; // Import your CSS file
+import "./Tabs.css";
 
 function Tabs() {
   const [selectedTab, setSelectedTab] = useState("radio-1");

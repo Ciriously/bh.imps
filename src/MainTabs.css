@@ -73,22 +73,23 @@ select option {
 }
 @media (max-width: 768px) {
   .main-tabs {
-    width: 85vw;
-    margin-left: 1rem;
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0;
     flex-direction: row; /* Stack tabs vertically on smaller screens */
   }
 
   .main-tabs select {
-    width: 100%; /* Make the select boxes full width on smaller screens */
+    width: 5%; /* Make the select boxes full width on smaller screens */
   }
   .main-tabs .subject-label {
     display: none;
   }
   .pdf-reader {
-    width: 85vw;
-    height: 43.5625rem;
+    width: 100vw;
+    height: 200vw;
     flex-shrink: 0;
-    margin-bottom: 28rem;
+    margin-bottom: 25rem;
   }
   .unavailable-text {
     color: #8e8e8e;
@@ -108,8 +109,8 @@ select option {
   }
   @media only screen and (max-width: 360px) {
     .main-tabs {
-      width: 80%;
-      margin-left: 0.1rem;
+      width: 100%;
+      margin-left: 0rem;
       flex-direction: row; /* Stack tabs vertically on smaller screens */
     }
 
@@ -124,6 +125,49 @@ select option {
       height: 100%;
       flex-shrink: 0;
       margin-bottom: 28rem;
+      margin-right: 0.5rem;
+    }
+    .unavailable-text {
+      color: #8e8e8e;
+      text-align: center;
+      font-family: "Inter-Regular";
+      position: absolute;
+      font-size: 0.9rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .blue-text {
+      color: #6658d3;
+      font-size: 0.9rem;
+      font-family: "Inter-Medium";
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px),
+    only screen and (min-width: 600px) and (max-width: 767px),
+    only screen and (min-width: 768px) and (max-width: 834px) and (orientation: portrait),
+    only screen and (min-width: 768px) and (max-width: 834px) and (orientation: landscape),
+    only screen and (min-width: 600) and (max-width: 840px) and (orientation: portrait),
+    only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) /* Samsung Tab S4 and similar devices */ /* iPad Air and larger tablets */ {
+    .main-tabs {
+      width: 95%;
+      margin-left: 2rem;
+      flex-direction: row; /* Stack tabs vertically on smaller screens */
+    }
+
+    .main-tabs select {
+      width: 100%; /* Make the select boxes full width on smaller screens */
+    }
+    .main-tabs .subject-label {
+      display: none;
+    }
+    .pdf-reader {
+      width: 95%;
+      height: 80%;
+      flex-shrink: 0;
+      margin-bottom: 15rem;
       margin-right: 0.5rem;
     }
     .unavailable-text {

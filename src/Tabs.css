@@ -91,13 +91,13 @@ input[id="radio-5"]:checked ~ .glider {
   transform: translateX(445%);
 }
 @media (max-width: 768px) {
-  .container {
-    margin-left: 1rem;
+  /* .container {
+    margin-left: 3rem;
     margin-top: 1rem;
-  }
+  } */
 
   .tabs {
-    width: 20rem;
+    width: 50%;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -109,7 +109,7 @@ input[id="radio-5"]:checked ~ .glider {
     margin-top: 0.2rem;
     font-family: "Gordita-Medium";
     transition: color 0.25s ease-in;
-    padding: -1rem -2rem;
+    margin: -1rem -2rem;
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide any overflow */
     text-overflow: ellipsis;
@@ -214,17 +214,5 @@ input[id="radio-5"]:checked ~ .glider {
     margin-left: -16.5rem;
     z-index: 1;
     transition: 0.25s ease-out;
-  }
-
-  /* Tablet and larger screen styles */
-  @media (min-width: 768px) {
-    .container {
-      width: 40.375rem;
-      margin-left: 40rem;
-    }
-
-    .tabs {
-      width: 44rem;
-    }
   }
 }
