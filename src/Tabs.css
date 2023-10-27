@@ -164,7 +164,7 @@ input[id="radio-5"]:checked ~ .glider {
   }
 
   .tabs {
-    width: 18rem;
+    width: 19rem;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -189,7 +189,7 @@ input[id="radio-5"]:checked ~ .glider {
     padding: 0 0.8rem;
   }
   input[id="radio-1"]:checked ~ .glider {
-    transform: translateX(40%);
+    transform: translateX(35%);
   }
 
   input[id="radio-2"]:checked ~ .glider {

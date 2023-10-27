@@ -68,7 +68,8 @@ body {
       width: 100%;
       transform: scale(0.5); /* Adjust the scale factor for smaller screens */
       transform-origin: top left;
-      margin-left: 0rem;
+      margin-left: -1rem;
+      margin-top: 1rem;
     }
 
     .all-page-container {
