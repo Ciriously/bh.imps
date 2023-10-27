@@ -94,12 +94,12 @@ input[id="radio-5"]:checked ~ .glider {
 @media (max-width: 768px) {
   .container {
     .container {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
   }
 
   .tabs {
-    width: 100%;
+    width: 97%;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -131,15 +131,15 @@ input[id="radio-5"]:checked ~ .glider {
   }
 
   input[id="radio-3"]:checked ~ .glider {
-    transform: translateX(218%);
+    transform: translateX(210%);
   }
 
   input[id="radio-4"]:checked ~ .glider {
-    transform: translateX(340%);
+    transform: translateX(325%);
   }
 
   input[id="radio-5"]:checked ~ .glider {
-    transform: translateX(460%);
+    transform: translateX(435%);
   }
   .glider {
     position: absolute;
@@ -150,7 +150,7 @@ input[id="radio-5"]:checked ~ .glider {
     border-radius: 1rem;
     background: #6658d3;
     margin-top: 0.3rem;
-    margin-left: -18.5rem;
+    margin-left: -17.5rem;
     z-index: 1;
     transition: 0.25s ease-out;
   }
