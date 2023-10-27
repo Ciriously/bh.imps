@@ -5,8 +5,9 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f7f8;
-  margin-left: 29rem;
-  width: 64rem;
+  margin-left: auto; /* Set the left margin to auto */
+  margin-right: auto; /* Set the right margin to auto */
+  width: 64rem; /* Set the desired width */
   height: 4.5rem;
   border-radius: 0.875rem;
 }
@@ -14,6 +15,7 @@
 .main-tabs select {
   border: 1px solid #f4f7f8;
   margin: 10px;
+  justify-content: center;
   width: 12.5rem;
   background-color: #f4f7f8;
   font-family: "Gordita Regular";
