@@ -17,3 +17,13 @@ create a div for main content and add margin auto
 2 IMP Topic
 3 IMP Ques
 4 Prac paper
+const responsivedepartments = isMobile
+? [
+"Computer Science",
+"Information Technology",
+"Electronics and Telecommunication",
+"Electrical engineering",
+"Mechanical engineering",
+"Civil ",
+]
+: ["CMPN", "INFT", "EXTC", "MECH", "CIVIL"];

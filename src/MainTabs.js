@@ -22,14 +22,14 @@ export default function MainTabs() {
   const pageWidth = 800;
   const pageHeight = 1000;
 
-  const universities = ["Mumbai University", "Gujurat Technical University"];
+  const universities = ["Mumbai University", "Gujarat Technical University"];
   const departments = [
     "Computer Science",
     "Information Technology",
-    "ECE",
-    "EEE",
-    "Mechanical",
-    "Civil",
+    "Electronics and Telecommunication",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Civil Engineering",
   ];
   const semesters = [
     "Semester 1",
@@ -69,7 +69,6 @@ export default function MainTabs() {
     />
   ));
 
-  // Determine the shortened university and semester names for mobile mode
   const isMobile = window.innerWidth <= 768;
   const responsiveUniversities = isMobile
     ? ["MU", "GTU"]
@@ -87,6 +86,17 @@ export default function MainTabs() {
         "Semester 8",
       ];
 
+  const responsivedepartments = isMobile
+    ? ["CMPN", "INFT", "EXTC", "ELEC", "MECH", "CIVIL"]
+    : [
+        "Computer Science",
+        "Information Technology",
+        "Electronics and Telecommunication",
+        "Electrical Engineering",
+        "Mechanical Engineering",
+        "Civil Engineering",
+      ];
+
   return (
     <div className="main-tabs">
       <CustomDropdown
@@ -99,7 +109,7 @@ export default function MainTabs() {
       />
       <CustomDropdown
         label="Department"
-        options={departments}
+        options={responsivedepartments}
         value={selectedOptions.department}
         onChange={(value) =>
           setSelectedOptions({ ...selectedOptions, department: value })
