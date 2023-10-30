@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
   background-color: #f4f7f8;
-  margin-left: auto; /* Set the left margin to auto */
-  margin-right: auto; /* Set the right margin to auto */
-  width: 70rem; /* Set the desired width */
+  margin-left: auto;
+  margin-right: auto;
+  width: 70rem;
   height: 4.5rem;
   border-radius: 0.875rem;
 }
@@ -91,6 +91,20 @@ select option {
   }
   &::-webkit-scrollbar-thumb {
     background: transparent;
+  }
+  /* main-tabs.css */
+  .download-btn {
+    position: absolute;
+    top: 6.2rem; /* Adjust this value to position the button vertically */
+    right: 10rem; /* Adjust this value to position the button horizontally */
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+  }
+
+  .download-btn img {
+    max-width: 30px; /* Adjust the image width as needed */
+    height: auto;
   }
 }
 

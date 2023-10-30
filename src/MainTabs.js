@@ -3,6 +3,7 @@ import { Document, Page } from "react-pdf";
 import "./MainTabs.css";
 import CustomDropdown from "./CustomDropdown";
 import Tabs from "./Tabs";
+import downloadBtnPNG from "./download.png"; // Import the PNG image for the button
 
 export default function MainTabs() {
   const [numPages, setNumPages] = useState(null);
@@ -97,6 +98,25 @@ export default function MainTabs() {
         "Civil Engineering",
       ];
 
+  const handleDownload = () => {
+    if (pdfFile) {
+      const pdfFileName = pdfFile.split("/").pop();
+      fetch(pdfFile)
+        .then((response) => response.blob())
+        .then((blob) => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = pdfFileName;
+          a.click();
+          window.URL.revokeObjectURL(url);
+        })
+        .catch((error) => {
+          console.error("Error downloading PDF:", error);
+        });
+    }
+  };
+
   return (
     <div className="main-tabs">
       <CustomDropdown
@@ -134,6 +154,9 @@ export default function MainTabs() {
       />
       <Tabs />
       <div className="pdf-container">
+        <div className="download-btn" onClick={handleDownload}>
+          <img src={downloadBtnPNG} alt="Download PDF" />
+        </div>
         {pdfFile ? (
           <Document
             file={pdfFile}
